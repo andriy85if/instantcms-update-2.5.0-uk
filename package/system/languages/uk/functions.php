@@ -47,7 +47,7 @@ function lang_slug($string){
     $string    = mb_strtolower($string, 'utf-8');
     $string    = str_replace(' ', '-', $string);
 
-    $slug = preg_replace ('/[^a-zа-яё0-9\-\/]/u', '-', $string);
+    $slug = preg_replace ('/[^a-zа-яёіїєґ0-9\-\/]/u', '-', $string);
     $slug = preg_replace('/([-]+)/i', '-', $slug);
     $slug = trim($slug, '-');
 
